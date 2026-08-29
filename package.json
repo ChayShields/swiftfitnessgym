@@ -9,12 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mantine/carousel": "^7.14.3",
-    "@mantine/core": "7.14.3",
-    "@mantine/form": "^7.15.1",
-    "@mantine/hooks": "7.14.3",
-    "@mantine/modals": "^7.14.3",
-    "@mantine/notifications": "^7.15.1",
+    "@mantine/carousel": "7.17.8",
+    "@mantine/core": "7.17.8",
+    "@mantine/form": "7.17.8",
+    "@mantine/hooks": "7.17.8",
+    "@mantine/modals": "7.17.8",
+    "@mantine/notifications": "7.17.8",
     "embla-carousel-react": "^7.1.0",
     "next": "15.5.23",
     "nodemailer": "^9.0.5",
