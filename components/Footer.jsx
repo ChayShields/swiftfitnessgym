@@ -69,7 +69,22 @@ export default function Footer({ details, pageLinks, legalLinks, socials }) {
                     })}
                 </Group>
                 <Divider color="rgba(255,255,255,0.12)" size={1} my="1.4rem" />
-                <CmsHtml c="#8a8a8a">{copyright}</CmsHtml>
+                <Group justify="space-between" gap="0.6rem">
+                    <CmsHtml c="#8a8a8a">{copyright}</CmsHtml>
+                    <Text c="#8a8a8a" fz="0.9rem">
+                        Designed and developed by{" "}
+                        <Text
+                            component={Link}
+                            href="https://hireme.link"
+                            target="_blank"
+                            c="#cfcfcf"
+                            span
+                            className="footer-link"
+                        >
+                            Chay Shields
+                        </Text>
+                    </Text>
+                </Group>
             </Container>
         </Box>
     )
