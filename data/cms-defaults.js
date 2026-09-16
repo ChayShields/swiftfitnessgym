@@ -48,6 +48,7 @@ export const footerDefaults = {
             { label: "Sports Therapy / Massage / Sun Beds", url: "/sunbeds-services" },
             { label: "Reviews", url: "/reviews" },
             { label: "Gym Membership", url: "/gym-membership" },
+            { label: "Swift Ink Tattoo", url: "/swift-ink-tattoo" },
         ],
     },
     legal_links: {
@@ -330,5 +331,38 @@ export const membershipSuccessDefaults = {
         email_button: { text: "Email a photo", url: "mailto:info.swiftfitness@gmail.com" },
         form_intro: "You can also download the membership booking form, fill it out and email it back to us.",
         form_button: { text: "Download membership form", url: "/gym-membership-form.pdf" },
+    },
+}
+
+export const tattooDefaults = {
+    seo: {
+        seo_title: "Swift Ink Tattoo | SwiftFitness Gym",
+        seo_description: "Meet Matt of Swift Ink Tattoo at SwiftFitness Gym. Over 8 years of experience, from American traditional to realism, fine line, geometric, blackwork, tribal, cover ups and cartoons.",
+    },
+    hero: {
+        breadcrumb: "Swift Ink Tattoo",
+        image: "/images/swift-ink/predator.jpg",
+        kicker: "At the gym",
+        title: "Matt of Swift Ink Tattoo",
+    },
+    intro: {
+        logo: "/images/swift-ink/logo.jpg",
+        logo_alt: "Swift Ink Tattoo Studio",
+        heading: "Swift Ink Tattoo",
+        body: "SwiftFitness Gym would like to introduce you to Matt of Swift Ink Tattoo. Matt will be bringing over 8 years of experience to SwiftFitness Gym. Matt covers all genres of tattooing, from American traditional to realism, fine line to geometric, Blackwork to tribal, cover ups to cartoons, he's literally got you covered!",
+        booking_body: "To book an appointment with him please either contact us by email @ info.swiftfitness@gmail.com or follow us on Facebook or Instagram and message us there.",
+        email_button: { text: "Email us", url: "mailto:info.swiftfitness@gmail.com" },
+        facebook_button: { text: "Facebook", url: "https://www.facebook.com/swiftfitnessgym" },
+        instagram_button: { text: "Instagram", url: "https://www.instagram.com/swiftfitness.gym/" },
+    },
+    gallery: {
+        heading: "Recent work",
+        items: [
+            { image: "/images/swift-ink/predator.jpg", alt: "Predator tattoo on the calf" },
+            { image: "/images/swift-ink/raven.jpg", alt: "Raven tattoo on the upper arm" },
+            { image: "/images/swift-ink/predator-arm.jpg", alt: "Predator tattoo on the forearm" },
+            { image: "/images/swift-ink/swallow.jpg", alt: "Swallow tattoo on the upper arm" },
+            { image: "/images/swift-ink/koala.jpg", alt: "Koala tattoo on the wrist" },
+        ],
     },
 }

@@ -46,9 +46,13 @@ export default async function RootLayout({ children }) {
   const links = pickItems(navbar?.links?.items, navbarDefaults.links.items).filter((item) => item.url !== "/classes")
   const contact = mergeSection(navbar?.contact, navbarDefaults.contact)
   const details = mergeSection(footer?.details, footerDefaults.details)
+  const tattooLink = { label: "Swift Ink Tattoo", url: "/swift-ink-tattoo" }
+  const pageLinkItems = pickItems(footer?.page_links?.items, footerDefaults.page_links.items).filter((item) => item.url !== "/classes")
   const pageLinks = {
     heading: pickText(footer?.page_links?.heading, footerDefaults.page_links.heading),
-    items: pickItems(footer?.page_links?.items, footerDefaults.page_links.items).filter((item) => item.url !== "/classes"),
+    items: pageLinkItems.some((item) => item.url === tattooLink.url)
+      ? pageLinkItems
+      : [...pageLinkItems, tattooLink],
   }
   const legalLinks = {
     heading: pickText(footer?.legal_links?.heading, footerDefaults.legal_links.heading),
