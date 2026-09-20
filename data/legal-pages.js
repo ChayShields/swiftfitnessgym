@@ -62,7 +62,7 @@ export const privacyDefaults = {
         title: "Privacy policy",
     },
     intro: {
-        updated: "Last updated 19 August 2026.",
+        updated: "Last updated 20 September 2026.",
     },
     sections: {
         items: [
@@ -89,6 +89,10 @@ export const privacyDefaults = {
             {
                 heading: "Payments",
                 body: "Monthly memberships are taken by direct debit through GoCardless. When you follow a Join now link you leave our site and pay on GoCardless. The £10 sign-up fee is taken separately once you are on our system.\n\nGoCardless handles the payment details. Their privacy information is on their own site.",
+            },
+            {
+                heading: "Website analytics",
+                body: "If you accept analytics cookies on our website, Google Analytics collects information about how you use the site, such as the pages you visit, roughly where you are and what device you use. It identifies your browser with a random ID rather than your name or contact details. We use it only to understand which pages are useful. Google acts on our behalf to provide this service.\n\nThis only happens if you choose Accept on the cookie banner. You can change your choice at any time with the Cookie settings link at the bottom of any page. There is more detail on our cookie policy page.",
             },
             {
                 heading: "Why we use your information",
@@ -118,13 +122,17 @@ export const cookieDefaults = {
         title: "Cookie policy",
     },
     intro: {
-        updated: "Last updated 19 August 2026.",
+        updated: "Last updated 20 September 2026.",
     },
     sections: {
         items: [
             {
                 heading: "This website",
-                body: "This website does not set marketing or analytics cookies, and it does not show a cookie banner.\n\nThe site may use cookies that are needed for it to work, such as keeping a page working while you fill in the contact form.",
+                body: "This website does not set marketing or advertising cookies.\n\nThe site may use cookies that are needed for it to work, such as keeping a page working while you fill in the contact form. These do not need your consent.",
+            },
+            {
+                heading: "Analytics cookies (Google Analytics)",
+                body: "If you choose Accept on our cookie banner, we use Google Analytics to count visits and see which pages are useful. It sets two cookies in your browser, called _ga and _ga_ followed by an ID, which last up to 2 years. They give your browser a random identifier (not your name or contact details) and send information such as the pages you view, your approximate location and your device type to Google. We do not use it for advertising.\n\nIf you choose Reject, or do not choose, Google Analytics is not loaded and no analytics cookies are set.\n\nYou can change your choice at any time using the Cookie settings link at the bottom of every page. Google's own privacy information is on their site.",
             },
             {
                 heading: "Joining online",

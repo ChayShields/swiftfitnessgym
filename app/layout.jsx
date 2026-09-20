@@ -10,6 +10,8 @@ import { ModalsProvider } from "@mantine/modals";
 import Navbar from "../components/Navbar";
 import "../styles/styles.css";
 import Footer from "../components/Footer";
+import CookieConsent from "../components/CookieConsent";
+import GoogleAnalytics from "../components/GoogleAnalytics";
 import { Notifications } from "@mantine/notifications";
 import { getCmsPage, mergeSection, pickItems, pickText } from "../lib/cms";
 import { stripCmsHtml } from "../lib/sanitize-html";
@@ -79,6 +81,8 @@ export default async function RootLayout({ children }) {
             <Navbar brand={brand} links={links} contact={contact} />
             {children}
             <Footer details={details} pageLinks={pageLinks} legalLinks={legalLinks} socials={socials} />
+            <CookieConsent />
+            <GoogleAnalytics />
           </ModalsProvider>
         </MantineProvider>
       </body>

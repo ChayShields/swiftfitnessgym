@@ -6,6 +6,7 @@ import { interpolateCms } from "../lib/sanitize-html"
 import { TbBrandFacebook, TbBrandInstagram, TbClock, TbMail, TbMapPin, TbPhone } from "react-icons/tb"
 import Link from "./Link"
 import Image from "./Image"
+import { openCookieSettings } from "./CookieConsent"
 
 function socialIcon(label) {
     const name = (label || "").toLowerCase()
@@ -55,6 +56,16 @@ export default function Footer({ details, pageLinks, legalLinks, socials }) {
                         {legalLinks.items.map((item) => (
                             <Text key={item.url} className="footer-link" component={Link} c="#cfcfcf" href={item.url}>{item.label}</Text>
                         ))}
+                        <Text
+                            component="button"
+                            type="button"
+                            className="footer-link"
+                            c="#cfcfcf"
+                            onClick={openCookieSettings}
+                            style={{ background: "none", border: 0, padding: "0.5rem 0", textAlign: "left", cursor: "pointer", font: "inherit" }}
+                        >
+                            Cookie settings
+                        </Text>
                     </Stack>
                 </SimpleGrid>
                 <Group mt={{ base: "1.4rem", md: "1.4rem" }} gap="1.4rem">
