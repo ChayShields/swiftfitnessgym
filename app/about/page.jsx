@@ -54,7 +54,7 @@ export default async function AboutPage() {
                             </Stack>
                         </GridCol>
                         <GridCol span={{ base: 12, md: 6 }}>
-                            <Image baseWidth={1080} baseHeight={720} h={{ base: "18rem", sm: "24rem" }} w="100%" src={story.photo} alt={story.photo_alt} />
+                            <Image baseWidth={1080} baseHeight={720} h={{ base: "18rem", sm: "24rem" }} w="100%" sizes="(min-width: 62em) 560px, 100vw" src={story.photo} alt={story.photo_alt} />
                         </GridCol>
                     </Grid>
                 </Container>
@@ -65,7 +65,7 @@ export default async function AboutPage() {
                     <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="0.8rem">
                         {spaceItems.map((item, index) => (
                             <Box key={`${item.title}-${index}`} className="facility-tile">
-                                <Image baseWidth={2560} baseHeight={1920} h={{ base: "14rem", sm: "16rem" }} w="100%" src={item.image} alt={item.title} />
+                                <Image baseWidth={2560} baseHeight={1920} h={{ base: "14rem", sm: "16rem" }} w="100%" sizes="(min-width: 75em) 580px, (min-width: 48em) 50vw, 100vw" src={item.image} alt={item.title} />
                                 <Box className="facility-label">
                                     <CmsHtml>{item.title}</CmsHtml>
                                     <CmsHtml className="facility-copy" fz="0.9rem" fw={400} c="#d8d8d8">{item.text}</CmsHtml>
@@ -80,7 +80,7 @@ export default async function AboutPage() {
                     <CmsHtml heading order={2} mb="2rem" fz={{ base: "2rem", sm: "2.4rem" }}>{equipment.heading}</CmsHtml>
                     <Grid gutter="3rem">
                         <GridCol span={{ base: 12, md: 6 }}>
-                            <Image mb="1.2rem" baseWidth={2560} baseHeight={1920} h="16rem" w="100%" src={equipment.cardio_image} alt={equipment.cardio_image_alt} />
+                            <Image mb="1.2rem" baseWidth={2560} baseHeight={1920} h="16rem" w="100%" sizes="(min-width: 62em) 560px, 100vw" src={equipment.cardio_image} alt={equipment.cardio_image_alt} />
                             <CmsHtml heading order={3} fz="1.4rem" mb="0.8rem">{equipment.cardio_heading}</CmsHtml>
                             <List spacing="0.35rem">
                                 {cardioItems.map((item, index) => (
@@ -91,7 +91,7 @@ export default async function AboutPage() {
                             </List>
                         </GridCol>
                         <GridCol span={{ base: 12, md: 6 }}>
-                            <Image mb="1.2rem" baseWidth={2560} baseHeight={1920} h="16rem" w="100%" src={equipment.resistance_image} alt={equipment.resistance_image_alt} />
+                            <Image mb="1.2rem" baseWidth={2560} baseHeight={1920} h="16rem" w="100%" sizes="(min-width: 62em) 560px, 100vw" src={equipment.resistance_image} alt={equipment.resistance_image_alt} />
                             <CmsHtml heading order={3} fz="1.4rem" mb="0.8rem">{equipment.resistance_heading}</CmsHtml>
                             <List spacing="0.35rem">
                                 {resistanceItems.map((item, index) => (

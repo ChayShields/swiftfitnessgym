@@ -71,7 +71,7 @@ export default function SportsTherapyPage({ hero, massage, sunbeds, quote }) {
                                 <CmsHtml size="lg">
                                     {massage.body}
                                 </CmsHtml>
-                                <Image baseWidth={1080} baseHeight={1440} h={{ base: "18rem", sm: "24rem" }} w="100%" src={massage.image_2} alt={massage.image_2_alt} />
+                                <Image baseWidth={1080} baseHeight={1440} h={{ base: "18rem", sm: "24rem" }} w="100%" sizes="(min-width: 62em) 470px, 100vw" src={massage.image_2} alt={massage.image_2_alt} />
                             </Stack>
                         </GridCol>
                         <GridCol span={{ base: 12, md: 7 }}>

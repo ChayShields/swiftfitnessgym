@@ -9,7 +9,7 @@ export default function MembershipPlanGrid({ plans, priceSuffix, buttonText }) {
             {plans.map((plan) => (
                 <Card className="membership-card" key={plan.id} bd="1px solid #dcdcdc" bg="#fff" p={0}>
                     <CardSection>
-                        <Image className="plan-photo" baseWidth={2560} baseHeight={1920} h="8.5rem" w="100%" src={plan.image} alt={plan.title} />
+                        <Image className="plan-photo" baseWidth={2560} baseHeight={1920} h="8.5rem" w="100%" sizes="(min-width: 75em) 380px, (min-width: 62em) 33vw, (min-width: 48em) 50vw, 100vw" src={plan.image} alt={plan.title} />
                     </CardSection>
                     <Stack gap="0.3rem" p="1.3rem" h="100%" justify="space-between">
                         <div>

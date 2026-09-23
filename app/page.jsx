@@ -69,8 +69,8 @@ export default async function HomePage() {
               <Button w="fit-content" size="md" component={Link} href={membership.button.url}>{membership.button.text}</Button>
             </Stack>
             <Box className="overlap-wrap" w={{ base: "100%", sm: "28rem" }}>
-              <Image className="overlap-main" baseWidth={2560} baseHeight={1920} h="20rem" w="78%" src={membership.image} alt={membership.image_alt} />
-              <Image className="overlap-inset" baseWidth={2560} baseHeight={1920} src={membership.inset_image} alt={membership.inset_image_alt} />
+              <Image className="overlap-main" baseWidth={2560} baseHeight={1920} h="20rem" w="78%" sizes="(min-width: 48em) 360px, 100vw" src={membership.image} alt={membership.image_alt} />
+              <Image className="overlap-inset" baseWidth={2560} baseHeight={1920} sizes="(min-width: 48em) 240px, 100vw" src={membership.inset_image} alt={membership.inset_image_alt} />
             </Box>
           </Group>
         </Container>
@@ -79,7 +79,7 @@ export default async function HomePage() {
       <Box py={{ base: "3.5rem", sm: "5rem" }}>
         <Container>
           <Group align="center" justify="space-between" gap="3rem" wrap="wrap-reverse">
-            <Image baseWidth={2560} baseHeight={1920} w={{ base: "100%", sm: "28rem" }} h="20rem" src={trial.image} alt={trial.image_alt} />
+            <Image baseWidth={2560} baseHeight={1920} w={{ base: "100%", sm: "28rem" }} h="20rem" sizes="(min-width: 48em) 448px, 100vw" src={trial.image} alt={trial.image_alt} />
             <Stack maw="30rem" gap="0.9rem">
               <Text c="primary" fw={700} tt="uppercase" lts="0.12em" fz="0.85rem">{trial.kicker}</Text>
               <CmsHtml heading order={2} fz={{ base: "2rem", sm: "2.6rem" }} lh={1.1}>{trial.heading}</CmsHtml>
@@ -113,7 +113,7 @@ export default async function HomePage() {
           <Box className="photo-bento">
             {gallery.map((photo, index) => (
               <Box key={`${photo.image}-${index}`} className={photo.wide ? "photo-bento-wide" : ""} h="100%">
-                <Image baseWidth={2560} baseHeight={1920} h="100%" w="100%" src={photo.image} alt="SwiftFitness Gym" />
+                <Image baseWidth={2560} baseHeight={1920} h="100%" w="100%" sizes={photo.wide ? "(min-width: 48em) 500px, 100vw" : "(min-width: 48em) 340px, 50vw"} src={photo.image} alt="SwiftFitness Gym" />
               </Box>
             ))}
           </Box>

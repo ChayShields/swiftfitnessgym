@@ -90,7 +90,7 @@ export default function ContactPage({ header, details }) {
                                 )
                             })}
                         </Stack>
-                        <Image baseWidth={2560} baseHeight={1920} h="16rem" w="100%" src={header.photo} alt={header.photo_alt} />
+                        <Image baseWidth={2560} baseHeight={1920} h="16rem" w="100%" sizes="(min-width: 62em) 470px, 100vw" src={header.photo} alt={header.photo_alt} />
                     </GridCol>
                     <GridCol span={{ base: 12, md: 7 }}>
                         <Box bg="#fff" p={{ base: "1.4rem", sm: "2rem" }} bd="1px solid #e4e4e4">
