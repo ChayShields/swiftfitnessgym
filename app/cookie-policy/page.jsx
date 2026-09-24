@@ -7,6 +7,7 @@ export async function generateMetadata() {
     return cmsMetadata(content, {
         title: cookieDefaults.seo.seo_title,
         description: cookieDefaults.seo.seo_description,
+        path: "/cookie-policy",
     })
 }
 

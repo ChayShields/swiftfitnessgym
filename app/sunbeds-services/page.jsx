@@ -7,6 +7,7 @@ export async function generateMetadata() {
     return cmsMetadata(content, {
         title: therapyDefaults.seo.seo_title,
         description: therapyDefaults.seo.seo_description,
+        path: "/sunbeds-services",
     })
 }
 

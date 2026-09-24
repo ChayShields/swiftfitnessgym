@@ -10,10 +10,13 @@ import { membershipSuccessDefaults } from "../../../data/cms-defaults"
 
 export async function generateMetadata() {
     const cms = await getCmsPage("gym-membership-success")
-    return cmsMetadata(cms, {
-        title: membershipSuccessDefaults.seo.seo_title,
-        description: membershipSuccessDefaults.seo.seo_description,
-    })
+    return {
+        ...cmsMetadata(cms, {
+            title: membershipSuccessDefaults.seo.seo_title,
+            description: membershipSuccessDefaults.seo.seo_description,
+        }),
+        robots: { index: false, follow: false },
+    }
 }
 
 export default async function MembershipSuccessPage({ searchParams }) {

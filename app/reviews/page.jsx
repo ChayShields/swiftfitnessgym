@@ -13,6 +13,7 @@ export async function generateMetadata() {
     return cmsMetadata(content, {
         title: reviewsDefaults.seo.seo_title,
         description: reviewsDefaults.seo.seo_description,
+        path: "/reviews",
     })
 }
 

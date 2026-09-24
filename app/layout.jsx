@@ -34,6 +34,10 @@ export async function generateMetadata() {
   const seo = mergeSection(navbar?.seo, navbarDefaults.seo)
 
   return {
+    // Every relative canonical / og:url below resolves against this. www is
+    // the primary domain on Vercel (the bare domain 308-redirects to it), and
+    // it matches the sitemap.
+    metadataBase: new URL("https://www.swiftfitnessgym.co.uk"),
     title: stripCmsHtml(pickText(seo.site_title, navbarDefaults.seo.site_title)),
     description: stripCmsHtml(pickText(seo.site_description, navbarDefaults.seo.site_description)),
   }

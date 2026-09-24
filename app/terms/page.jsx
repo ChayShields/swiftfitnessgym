@@ -7,6 +7,7 @@ export async function generateMetadata() {
     return cmsMetadata(content, {
         title: termsDefaults.seo.seo_title,
         description: termsDefaults.seo.seo_description,
+        path: "/terms",
     })
 }
 

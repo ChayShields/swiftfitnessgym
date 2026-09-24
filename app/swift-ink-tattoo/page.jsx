@@ -13,6 +13,7 @@ export async function generateMetadata() {
     return cmsMetadata(content, {
         title: tattooDefaults.seo.seo_title,
         description: tattooDefaults.seo.seo_description,
+        path: "/swift-ink-tattoo",
     })
 }
 

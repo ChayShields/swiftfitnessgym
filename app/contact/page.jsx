@@ -7,6 +7,7 @@ export async function generateMetadata() {
     return cmsMetadata(content, {
         title: contactDefaults.seo.seo_title,
         description: contactDefaults.seo.seo_description,
+        path: "/contact",
     })
 }
 

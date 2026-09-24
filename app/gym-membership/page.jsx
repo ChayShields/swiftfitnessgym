@@ -13,6 +13,7 @@ export async function generateMetadata() {
     return cmsMetadata(content, {
         title: membershipDefaults.seo.seo_title,
         description: membershipDefaults.seo.seo_description,
+        path: "/gym-membership",
     })
 }
 

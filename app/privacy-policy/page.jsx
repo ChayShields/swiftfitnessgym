@@ -7,6 +7,7 @@ export async function generateMetadata() {
     return cmsMetadata(content, {
         title: privacyDefaults.seo.seo_title,
         description: privacyDefaults.seo.seo_description,
+        path: "/privacy-policy",
     })
 }
 

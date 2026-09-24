@@ -11,8 +11,8 @@ export async function generateMetadata() {
   return cmsMetadata(content, {
     title: homeDefaults.seo.seo_title,
     description: homeDefaults.seo.seo_description,
+    path: "/",
   }, {
-    url: "https://swiftfitnessgym.co.uk/",
     type: "website",
   })
 }
