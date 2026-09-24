@@ -73,7 +73,7 @@ export const homeDefaults = {
         seo_description: "SwiftFitness. The family run gym with you in mind! Adult memberships from £31.99 a month and no contracts.",
     },
     hero: {
-        video_url: "/videos/hero.mp4",
+        video_url: "",
         poster: "/images/photo-7.jpg",
         headline: "SWIFTFITNESS",
         subhead: "The family run gym with you in mind. Here to help you achieve your fitness goals.",
@@ -103,7 +103,7 @@ export const homeDefaults = {
         kicker: "The gym",
         heading: "Inside SwiftFitness",
         button: { text: "See the facilities", url: "/about" },
-        video_url: "/videos/hero.mp4",
+        video_url: "",
         poster: "/images/photo-7.jpg",
     },
     gallery: {

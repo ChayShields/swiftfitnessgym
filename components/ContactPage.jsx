@@ -65,7 +65,9 @@ export default function ContactPage({ header, details }) {
         <Box bg="#F4F5F7" mih="60vh">
             <PageCrumbs label={header.breadcrumb} href="/contact" />
             <Container py={{ base: "3rem", sm: "4.5rem" }}>
-                <Grid overflow="visible" gutter="3rem">
+                {/* 1rem gap on phones: 3rem pushed the columns 8px past a
+                    390px screen and the page scrolled sideways. */}
+                <Grid overflow="visible" gutter={{ base: "1rem", md: "3rem" }}>
                     <GridCol span={{ base: 12, md: 5 }}>
                         <CmsHtml heading mb="0.6rem">{header.heading}</CmsHtml>
                         <CmsHtml mb="1.6rem" size="lg">{header.intro}</CmsHtml>

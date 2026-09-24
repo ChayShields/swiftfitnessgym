@@ -8,6 +8,9 @@ function buildCsp(nonce) {
     "img-src 'self' data: https://*.supabase.co https://*.google-analytics.com https://*.googletagmanager.com",
     "style-src 'self' 'unsafe-inline'",
     "font-src 'self'",
+    // The "Inside SwiftFitness" YouTube video, loaded only after a click
+    // (components/HomeDemoVideo.jsx), privacy-enhanced domain only.
+    "frame-src https://www.youtube-nocookie.com",
     "frame-ancestors 'none'",
     "base-uri 'self'",
     "form-action 'self'",

@@ -3,6 +3,7 @@ import CmsHtml from "../components/CmsHtml";
 import Link from "../components/Link";
 import Image from "../components/Image";
 import QuoteBand from "../components/QuoteBand";
+import HomeDemoVideo from "../components/HomeDemoVideo";
 import { cmsMetadata, getCmsPage, mergeSection, pickItems } from "../lib/cms";
 import { homeDefaults } from "../data/cms-defaults";
 
@@ -29,16 +30,21 @@ export default async function HomePage() {
   return (
     <Box>
       <Box className="hero-bg home-hero" style={{ backgroundImage: `url("${hero.poster}")` }}>
-        <video
-          className="home-hero-video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster={hero.poster}
-        >
-          <source src={hero.video_url} type="video/mp4" />
-        </video>
+        {/* Background video only when there is a real video file - a
+            YouTube page link can't play in a <video> tag, and without one
+            the banner shows its photo. */}
+        {hero.video_url && !/youtu\.?be/i.test(hero.video_url) && (
+          <video
+            className="home-hero-video"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster={hero.poster}
+          >
+            <source src={hero.video_url} type="video/mp4" />
+          </video>
+        )}
         <Container py={{ base: "3.5rem", sm: "4.5rem", md: "5.5rem" }} pos="relative" style={{ zIndex: 1 }}>
           <Stack maw="38rem" gap="1.1rem">
             <Box w="3.2rem" h="4px" bg="primary" />
@@ -101,15 +107,7 @@ export default async function HomePage() {
             </div>
             <Button variant="white" component={Link} href={inside.button.url}>{inside.button.text}</Button>
           </Group>
-          <video
-            className="home-demo-video"
-            controls
-            playsInline
-            preload="metadata"
-            poster={inside.poster}
-          >
-            <source src={inside.video_url} type="video/mp4" />
-          </video>
+          <HomeDemoVideo videoUrl={inside.video_url} poster={inside.poster} />
           <Box className="photo-bento">
             {gallery.map((photo, index) => (
               <Box key={`${photo.image}-${index}`} className={photo.wide ? "photo-bento-wide" : ""} h="100%">

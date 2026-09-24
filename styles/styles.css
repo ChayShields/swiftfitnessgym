@@ -51,6 +51,49 @@ body {
     z-index: 0;
 }
 
+.home-demo-video-poster {
+    position: relative;
+    padding: 0;
+    border: 0;
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.home-demo-video-poster:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+
+.home-demo-video-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4.5rem;
+    height: 4.5rem;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.65);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.9);
+    transition: background 150ms ease;
+}
+
+.home-demo-video-play::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 0.8rem 0 0.8rem 1.3rem;
+    border-color: transparent transparent transparent #fff;
+}
+
+.home-demo-video-poster:hover .home-demo-video-play {
+    background: rgba(0, 0, 0, 0.85);
+}
+
 .home-demo-video {
     display: block;
     width: 100%;
@@ -430,6 +473,18 @@ body {
 
 .legal-doc {
     max-width: 40rem;
+}
+
+/* Bullets hang in the margin: with the default inside bullets each line
+   was still full width, so every bullet stuck out ~6px past a phone
+   screen. Wrapped lines now line up under the text too. */
+.legal-section .mantine-List-root {
+    list-style-position: outside;
+    padding-inline-start: 1.25rem;
+}
+
+.legal-section .mantine-List-itemWrapper {
+    display: block;
 }
 
 .legal-section .mantine-List-itemLabel {
