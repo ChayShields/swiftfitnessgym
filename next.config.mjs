@@ -9,7 +9,6 @@ const securityHeaders = [
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
-  optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
   images: {
     // Optimized copies are kept for a year. Every CMS upload is written under
     // a fresh random file name and never overwritten, so a CMS image URL never

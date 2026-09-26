@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
     "@mantine/carousel": "7.17.8",
@@ -16,7 +15,7 @@
     "@mantine/modals": "7.17.8",
     "@mantine/notifications": "7.17.8",
     "embla-carousel-react": "^7.1.0",
-    "next": "15.5.26",
+    "next": "16.3.6",
     "nodemailer": "^9.0.5",
     "react": "18.3.1",
     "react-dom": "18.3.1",

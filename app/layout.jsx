@@ -69,7 +69,7 @@ export default async function RootLayout({ children }) {
   const socials = pickItems(footer?.socials?.items, footerDefaults.socials.items)
 
   return (
-    <html suppressHydrationWarning={true} lang="en" className={`${displayFont.variable} ${bodyFont.variable}`}>
+    <html suppressHydrationWarning={true} lang="en" data-scroll-behavior="smooth" className={`${displayFont.variable} ${bodyFont.variable}`}>
       <head>
         <ColorSchemeScript forceColorScheme="light" nonce={nonce} />
         <link rel="shortcut icon" href="/favicon.ico" />
