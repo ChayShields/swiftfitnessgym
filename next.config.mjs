@@ -1,4 +1,26 @@
+// One fixed policy for every response, so pages can be built once and served
+// from Vercel's CDN. A per-request nonce would force every page to render on
+// each visit. 'unsafe-inline' in script-src covers Mantine's colour-scheme
+// script and Next's inline hydration data. 'unsafe-eval' is kept to match the
+// previous production policy exactly. The only
+// third-party script is Google's gtag.js (loaded only after cookie consent);
+// frame-src is the click-to-play YouTube embed on the home page.
+const csp = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com",
+  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com",
+  "img-src 'self' data: https://*.supabase.co https://*.google-analytics.com https://*.googletagmanager.com",
+  "style-src 'self' 'unsafe-inline'",
+  "font-src 'self'",
+  "frame-src https://www.youtube-nocookie.com",
+  "frame-ancestors 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "object-src 'none'",
+].join('; ')
+
 const securityHeaders = [
+  { key: 'Content-Security-Policy', value: csp },
   { key: 'X-Frame-Options', value: 'DENY' },
   { key: 'X-Content-Type-Options', value: 'nosniff' },
   { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },

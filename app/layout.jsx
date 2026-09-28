@@ -2,7 +2,6 @@ import "@mantine/core/styles.css";
 import "@mantine/notifications/styles.css";
 import '@mantine/carousel/styles.css';
 import React from "react";
-import { headers } from "next/headers";
 import { Oswald, Source_Sans_3 } from "next/font/google";
 import { MantineProvider, ColorSchemeScript } from "@mantine/core";
 import { theme } from "../theme";
@@ -44,7 +43,6 @@ export async function generateMetadata() {
 }
 
 export default async function RootLayout({ children }) {
-  const nonce = (await headers()).get("x-nonce") ?? undefined
   const [navbar, footer] = await Promise.all([
     getCmsPage("navbar"),
     getCmsPage("footer"),
@@ -71,7 +69,7 @@ export default async function RootLayout({ children }) {
   return (
     <html suppressHydrationWarning={true} lang="en" data-scroll-behavior="smooth" className={`${displayFont.variable} ${bodyFont.variable}`}>
       <head>
-        <ColorSchemeScript forceColorScheme="light" nonce={nonce} />
+        <ColorSchemeScript forceColorScheme="light" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <meta
           name="viewport"
