@@ -83,16 +83,16 @@ export default function Footer({ details, pageLinks, legalLinks, socials }) {
                 <Group justify="space-between" gap="0.6rem">
                     <CmsHtml c="#8a8a8a">{copyright}</CmsHtml>
                     <Text c="#8a8a8a" fz="0.9rem">
-                        Designed and developed by{" "}
+                        Designed and developed by Chay Shields at{" "}
                         <Text
                             component={Link}
-                            href="https://hireme.link"
+                            href="https://buildory.co.uk"
                             target="_blank"
                             c="#cfcfcf"
                             span
                             className="footer-link"
                         >
-                            Chay Shields
+                            Buildory
                         </Text>
                     </Text>
                 </Group>
